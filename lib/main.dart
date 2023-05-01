@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/views/screens/billprint_page.dart';
-import 'package:grocery_app/views/screens/details_page.dart';
 import 'package:grocery_app/views/screens/fruit_page.dart';
 import 'package:grocery_app/views/screens/grocery_page.dart';
 import 'package:grocery_app/views/screens/home_page.dart';
@@ -10,6 +9,8 @@ import 'package:grocery_app/views/screens/second_page.dart';
 import 'package:grocery_app/views/screens/splash_screen.dart';
 import 'package:grocery_app/views/screens/terms_of_use_page.dart';
 import 'package:grocery_app/views/screens/vegetables_page.dart';
+
+import 'views/screens/details_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,7 +42,7 @@ class _MyAppState extends State<MyApp> {
         "vegetables_page": (context) => VegetablesPage(),
         "fruit_page": (context) => FruitPage(),
         "grocery_page": (context) => GroceryPage(),
-        "homecare_page": (context) => HomeCarePage(),
+        "homecare_page": (context) => const HomeCarePage(),
         "details_page": (context) => DetailsPage(),
         "billprint_page": (context) => BillPrintPage(),
         // '/': (context) => Scaffold(

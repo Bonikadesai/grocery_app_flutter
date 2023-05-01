@@ -1,7 +1,19 @@
+class Globals {
+  static List<Bill> vegetables = [];
+  static String Total() {
+    double TotalPrice = 0.0;
+    for (int i = 0; i < vegetables.length; i++) {
+      TotalPrice += vegetables[i].subtotal!;
+    }
+    return TotalPrice.toStringAsFixed(2);
+  }
+}
+
 List<Map> fruits = [
   //fruits
   {
     'id': "1",
+    'quality': "1",
     'Category': "Fruit",
     'Name': "Mango",
     'img': "assets/images/mango.jpg",
@@ -17,6 +29,7 @@ List<Map> fruits = [
   },
   {
     'id': "2",
+    'quality': "1",
     'Category': "Fruit",
     'Name': "Banana",
     'img': "assets/images/banana.jpg",
@@ -33,6 +46,7 @@ List<Map> fruits = [
   },
   {
     'id': "3",
+    'quality': "1",
     'Category': "Fruit",
     'Name': "Blue berry",
     'img': "assets/images/blueberry.jpg",
@@ -47,6 +61,7 @@ List<Map> fruits = [
   },
   {
     'id': "4",
+    'quality': "1",
     'Category': "Fruit",
     'Name': "Kiwi",
     'img': "assets/images/kiwi.jpg",
@@ -62,6 +77,7 @@ List<Map> fruits = [
   },
   {
     'id': "5",
+    'quality': "1",
     'Category': "Fruit",
     'Name': "Pineapple",
     'img': "assets/images/pineapple.jpg",
@@ -75,6 +91,7 @@ List<Map> fruits = [
   },
   {
     'id': "6",
+    'quality': "1",
     'Category': "Fruit",
     'Name': "Sweet Melon",
     'img': "assets/images/sweet melon.jpg",
@@ -89,6 +106,7 @@ List<Map> fruits = [
   },
   {
     'id': "7",
+    'quality': "1",
     'Category': "Fruit",
     'Name': "Water Melon",
     'img': "assets/images/watermelon.jpg",
@@ -102,6 +120,7 @@ List<Map> fruits = [
   },
   {
     'id': "8",
+    'quality': "1",
     'Category': "Fruit",
     'Name': "Strawberry",
     'img': "assets/images/strawberry.jpg",
@@ -116,6 +135,7 @@ List<Map> vegetables = [
   //vegetables
   {
     'id': "9",
+    'quality': "1",
     'Category': "Vegetables",
     'Name': "Laddy Finger",
     'img': "assets/images/bhindi.jpg",
@@ -127,6 +147,7 @@ List<Map> vegetables = [
   },
   {
     'id': "10",
+    'quality': "1",
     'Category': "Vegetables",
     'Name': "Brinjal",
     'img': "assets/images/brinjal.jpg",
@@ -139,6 +160,7 @@ List<Map> vegetables = [
   },
   {
     'id': "11",
+    'quality': "1",
     'Category': "Vegetables",
     'Name': "Broccoli",
     'img': "assets/images/broccoli.jpg",
@@ -152,6 +174,7 @@ List<Map> vegetables = [
   },
   {
     'id': "12",
+    'quality': "1",
     'Category': "Vegetables",
     'Name': "Cabbage",
     'img': "assets/images/cabbage.jpg",
@@ -164,6 +187,7 @@ List<Map> vegetables = [
   },
   {
     'id': "13",
+    'quality': "1",
     'Category': "Vegetables",
     'Name': "Cauliflower",
     'img': "assets/images/cauliflower.jpg",
@@ -177,6 +201,7 @@ List<Map> vegetables = [
   },
   {
     'id': "14",
+    'quality': "1",
     'Category': "Vegetables",
     'Name': "Dhaniya",
     'img': "assets/images/dhaniya.jpg",
@@ -192,6 +217,7 @@ List<Map> vegetables = [
   },
   {
     'id': "15",
+    'quality': "1",
     'Category': "Vegetables",
     'Name': "Karela",
     'img': "assets/images/karela.jpg",
@@ -207,6 +233,7 @@ List<Map> vegetables = [
   },
   {
     'id': "16",
+    'quality': "1",
     'Category': "Vegetables",
     'Name': "Capsicum",
     'img': "assets/images/capsicum.jpg",
@@ -226,7 +253,8 @@ List<Map> vegetables = [
 List<Map> homecare = [
   //Home care
   {
-    'id': 17,
+    'id': "17",
+    'quality': "1",
     'Category': "Home care",
     'Name': "Arial Liquide",
     'img': "assets/images/arial.jpg",
@@ -235,10 +263,11 @@ List<Map> homecare = [
         " are inevitable parts of our lives. That doesn’t mean you should put up with them. Ariel’s "
         "brand new powder detergents will help you remove even the toughest stains in just one "
         "wash, while brightening your whites to make them look clean like new.\n",
-    'price': 504,
+    'price': "504",
   },
   {
-    'id': 18,
+    'id': "18",
+    'quality': "1",
     'Category': "Home care",
     'Name': "Domex Liquide",
     'img': "assets/images/domex.jpg",
@@ -249,10 +278,11 @@ List<Map> homecare = [
         "toilet cleaner contains the power of sodium hypochlorite as recommended by leading health "
         "organisations for disinfecting surfaces in home and institutional facilities. The ideal "
         "thickness formula of the toilet cleaner ensure\n",
-    'price': 97,
+    'price': "97",
   },
   {
-    'id': 19,
+    'id': "19",
+    'quality': "1",
     'Category': "Home care",
     'Name': "Rin Liquide",
     'img': "assets/images/rin.jpg",
@@ -263,10 +293,11 @@ List<Map> homecare = [
         "Being a liquid detergent, it dissolves quickly in high water level environments of washing"
         " machines. This detergent is safe on all fabrics, wool, cotton, silk, blends and all other"
         " fabrics.\n",
-    'price': 87,
+    'price': "87",
   },
   {
-    'id': 20,
+    'id': "20",
+    'quality': "1",
     'Category': "Home care",
     'Name': "Sharp Clean Liquide",
     'img': "assets/images/sharpclean.jpg",
@@ -276,10 +307,11 @@ List<Map> homecare = [
         "inactivation. The physical action of scrubbing with detergents and surfactants and rinsing "
         "with water removes substantial numbers of microorganisms. If a surface is not cleaned first"
         ", the success of the disinfection process can be compromised. \n",
-    'price': 425,
+    'price': "425",
   },
   {
-    'id': 21,
+    'id': "21",
+    'quality': "1",
     'Category': "Home care",
     'Name': "Surf Excel Liquide",
     'img': "assets/images/surfexcel.jpg",
@@ -292,10 +324,11 @@ List<Map> homecare = [
         "liquid its best suited for washing machines and ensures a superior laundry experience and "
         "offers the following benefits: FASTER STAIN REMOVAL: New Surf Excel Matic liquid with a "
         "powerful cleaning technology \n",
-    'price': 100,
+    'price': "100",
   },
   {
-    'id': 22,
+    'id': "22",
+    'quality': "1",
     'Category': "Home care",
     'Name': "Tide Liquide",
     'img': "assets/images/tide.jpg",
@@ -303,10 +336,11 @@ List<Map> homecare = [
     'desc': "Surfactants: These are the core stain removers in Tide detergents. They remove "
         "anything greasy from fabrics, and they work well on stains and food residues. Surfactants "
         "break up stains and disperse dirt that otherwise wouldn’t dissolve in water.\n",
-    'price': 541,
+    'price': "541",
   },
   {
-    'id': 23,
+    'id': "23",
+    'quality': "1",
     'Category': "Home care",
     'Name': "Vim Bar",
     'img': "assets/images/vim.jpg",
@@ -316,10 +350,11 @@ List<Map> homecare = [
         "to the cleaning benefits of lemons), Vim dishwash bar easily removes the toughest of "
         "stains.It does wonders in cleaning even in small quantities and provides the fastest "
         "removal of burnt food (as per independent lab test conducted on burnt food stains).\n",
-    'price': 105,
+    'price': "105",
   },
   {
-    'id': 24,
+    'id': "24",
+    'quality': "1",
     'Category': "Home care",
     'Name': "Wheel Detergent ",
     'img': "assets/images/wheel.jpg",
@@ -328,13 +363,14 @@ List<Map> homecare = [
         " that ensures tough stain removal from your clothes. This detergent powder is suitable for"
         " both your whites and colored clothes. It removes dirt from clothes, thereby removing "
         "dullness from them and leaves a pleasant fragrance.\n",
-    'price': 70,
+    'price': "70",
   },
 ];
 List<Map> grocery = [
   //grocery
   {
-    'id': 25,
+    'id': "25",
+    'quality': "1",
     'Category': "Grocery",
     'Name': "Gulab Sunflower",
     'img': "assets/images/gulabsunflower.jpg",
@@ -343,10 +379,11 @@ List<Map> grocery = [
         " like stir-frying, roasting, and sauteing. Use sunflower oil for roast potatoes, Yorkshire"
         " puddings, stir-frying vegetables or even in bakes as a replacement for butter. Buy Gulab "
         "Gold Double Filtered Refined Sunflower Oil online now!\n",
-    'price': 1895,
+    'price': "1895",
   },
   {
-    'id': 26,
+    'id': "26",
+    'quality': "1",
     'Category': "Grocery",
     'Name': "Gulab Groundnut",
     'img': "assets/images/groundnut.jpg",
@@ -354,10 +391,11 @@ List<Map> grocery = [
     'desc': "Gulab Groundnut Oil is filtered using our unique approach that combines the wisdom of "
         "the ancients with the best and upgraded equipment to remove the solid particles"
         " and contaminants from the oil while making it 100% natural and wholesome.\n",
-    'price': 3075,
+    'price': "3075",
   },
   {
-    'id': 27,
+    'id': "27",
+    'quality': "1",
     'Category': "Grocery",
     'Name': "Sugar",
     'img': "assets/images/sugar.jpg",
@@ -368,10 +406,11 @@ List<Map> grocery = [
         "of two bonded monosaccharides; common examples are sucrose (glucose + fructose), lactose "
         "(glucose + galactose), and maltose (two molecules of glucose). White sugar "
         "is a refined form of sucrose. In the body, compound sugars are hydrolysed into simple sugars.\n",
-    'price': 220,
+    'price': "220",
   },
   {
-    'id': 28,
+    'id': "28",
+    'quality': "1",
     'Category': "Grocery",
     'Name': "Shingdana",
     'img': "assets/images/singdana.jpg",
@@ -380,10 +419,11 @@ List<Map> grocery = [
         "offers you with a host of health benefits. Groundnuts are a great blend of healthy fats,"
         " protein and fibre that curbs your appetite, lowers the risk of heart disease and "
         "regulates blood glucose levels.\n",
-    'price': 35,
+    'price': "35",
   },
   {
-    'id': 29,
+    'id': "29",
+    'quality': "1",
     'Category': "Grocery",
     'Name': "Mug Dal",
     'img': "assets/images/mugdal.jpg",
@@ -391,10 +431,11 @@ List<Map> grocery = [
     'desc': "The high protein content contributes to building and repairing tissues and building"
         " muscles, bones, cartilage, blood, and skin.A 100 g serving of cooked moong dal can provide"
         " you with about 6 g protein. It also contains some amounts of vitamin E, C, and K.\n",
-    'price': 110,
+    'price': "110",
   },
   {
-    'id': 30,
+    'id': "30",
+    'quality': "1",
     'Category': "Grocery",
     'Name': "Moraiyo",
     'img': "assets/images/moraiyo.jpg",
@@ -402,10 +443,11 @@ List<Map> grocery = [
     'desc': "Not only rich in dietary fibre which helps digestion, but its also a very rich source"
         " of zinc, potassium, iron, calcium and phosphorus. Being gluten free, its ideal food for"
         " those suffering from Gluten intolerance.\n",
-    'price': 120,
+    'price': "120",
   },
   {
-    'id': 31,
+    'id': "31",
+    'quality': "1",
     'Category': "Grocery",
     'Name': "Rai",
     'img': "assets/images/rai.jpg",
@@ -413,10 +455,11 @@ List<Map> grocery = [
     'desc': "This tiny wonder plant is rich in protein, fibre, vitamin C and B-complex. "
         "While there are many health benefits, it is popularly known to relieve muscular pains and "
         "respiratory disorders. Some experts have shown its use in treating cancer and diabetes.\n",
-    'price': 40,
+    'price': "40",
   },
   {
-    'id': 32,
+    'id': "32",
+    'quality': "1",
     'Category': "Grocery",
     'Name': "Tuver Dal",
     'img': "assets/images/tuverdal.jpg",
@@ -425,13 +468,22 @@ List<Map> grocery = [
         "growth and development. Adding toor dal in your diet helps to meet your demands of iron "
         "and calcium while being a good source of folic acids promotes foetal growth and averts "
         "congenital birth defects of the foetus.\n",
-    'price': 120,
+    'price': "120",
   },
 ];
-class Globals{
-  String? name;
-  String? image;
-  double? price;
-  String? detail;
-  double? quanty;
+
+class Bill {
+  late String? name;
+  late String? image;
+  late double? price;
+  late String? detail;
+  late double? quanty;
+  late double? subtotal;
+  Bill(
+      {required this.name,
+      required this.image,
+      required this.price,
+      required this.detail,
+      required this.quanty,
+      required this.subtotal});
 }
