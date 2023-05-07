@@ -22,376 +22,379 @@ class _BillPrintPageState extends State<BillPrintPage> {
     pdf.addPage(
       pw.Page(
         margin: pw.EdgeInsets.zero,
-        build: (context) => pw.Center(
-          child: pw.Column(
-            children: [
-              pw.Row(
+        build: (context) => pw.Column(
+          children: [
+            pw.Row(
+              children: [
+                pw.Container(
+                  alignment: pw.Alignment.center,
+                  margin: pw.EdgeInsets.all(10),
+                  height: 50,
+                  width: 600,
+                  color: PdfColors.green,
+                  child: pw.Text(
+                    "Invoice Generator",
+                    style: pw.TextStyle(
+                      color: PdfColors.white,
+                      fontSize: 25,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            // pw.Column(
+            //   children: [
+            //     pw.Container(
+            //       alignment: pw.Alignment.centerLeft,
+            //       margin: pw.EdgeInsets.all(10),
+            //       height: 100,
+            //       width: 350,
+            //       child: pw.Column(
+            //         children: [
+            //           pw.RichText(
+            //             text: pw.TextSpan(
+            //               children: [
+            //                 pw.TextSpan(
+            //                   text: "Invoice : ",
+            //                   style: pw.TextStyle(
+            //                     fontWeight: pw.FontWeight.bold,
+            //                     fontSize: 18,
+            //                   ),
+            //                 ),
+            //                 pw.TextSpan(
+            //                   text: "\nDate : ",
+            //                   style: pw.TextStyle(
+            //                     fontWeight: pw.FontWeight.bold,
+            //                     fontSize: 18,
+            //                   ),
+            //                 ),
+            //                 pw.TextSpan(
+            //                   text: "26 April,2023 : ",
+            //                   style: pw.TextStyle(
+            //                     fontSize: 18,
+            //                   ),
+            //                 ),
+            //                 pw.TextSpan(
+            //                   text: "\nPayment Last Date : ",
+            //                   style: pw.TextStyle(
+            //                     fontWeight: pw.FontWeight.bold,
+            //                     fontSize: 18,
+            //                   ),
+            //                 ),
+            //               ],
+            //             ),
+            //           ),
+            //         ],
+            //       ),
+            //     ),
+            //     pw.Container(
+            //       alignment: pw.Alignment.center,
+            //       height: 120,
+            //       width: 250,
+            //       child: pw.Column(
+            //         children: [
+            //           pw.RichText(
+            //             text: pw.TextSpan(
+            //               children: [
+            //                 pw.TextSpan(
+            //                   text: "Receiver",
+            //                   style: pw.TextStyle(
+            //                     fontWeight: pw.FontWeight.bold,
+            //                     fontSize: 18,
+            //                   ),
+            //                 ),
+            //                 pw.TextSpan(
+            //                   text: "\nBD Desai",
+            //                   style: pw.TextStyle(
+            //                     fontSize: 18,
+            //                   ),
+            //                 ),
+            //                 pw.TextSpan(
+            //                   text: "\nVillion Shop",
+            //                   style: pw.TextStyle(
+            //                     fontSize: 18,
+            //                   ),
+            //                 ),
+            //                 pw.TextSpan(
+            //                   text: "\nIndia",
+            //                   style: pw.TextStyle(
+            //                     fontSize: 18,
+            //                   ),
+            //                 ),
+            //               ],
+            //             ),
+            //           ),
+            //         ],
+            //       ),
+            //     ),
+            //   ],
+            // ),
+            pw.Container(
+              alignment: pw.Alignment.centerLeft,
+              margin: pw.EdgeInsets.only(top: 5),
+              height: 30,
+              width: 580,
+              child: pw.Text(
+                "Contect number : +91 8511* *****",
+                style: pw.TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ),
+            pw.Container(
+              margin: pw.EdgeInsets.only(top: 5),
+              alignment: pw.Alignment.centerLeft,
+              height: 30,
+              width: 580,
+              child: pw.Text(
+                "7951bonikadesai@gmail.com",
+                style: pw.TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ),
+            pw.Container(
+              margin: pw.EdgeInsets.only(top: 5),
+              height: 30,
+              width: 600,
+              color: PdfColors.green,
+              child: pw.Row(
+                mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
                 children: [
-                  pw.Container(
-                    alignment: pw.Alignment.center,
-                    margin: pw.EdgeInsets.all(10),
-                    height: 50,
-                    width: 570,
-                    color: PdfColors.green,
+                  pw.Expanded(
+                    flex: 2,
                     child: pw.Text(
-                      "Invoice Generator",
+                      "Item Description",
                       style: pw.TextStyle(
-                        fontSize: 25,
-                      ),
-                    ),
-                  ),
-                  pw.Row(
-                    children: [
-                      pw.Container(
-                        alignment: pw.Alignment.centerLeft,
-                        margin: pw.EdgeInsets.all(10),
-                        height: 100,
-                        width: 350,
-                        child: pw.Column(
-                          children: [
-                            pw.RichText(
-                              text: pw.TextSpan(
-                                children: [
-                                  pw.TextSpan(
-                                    text: "Invoice : ",
-                                    style: pw.TextStyle(
-                                      fontWeight: pw.FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  pw.TextSpan(
-                                    text: "\nDate : ",
-                                    style: pw.TextStyle(
-                                      fontWeight: pw.FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  pw.TextSpan(
-                                    text: "26 April,2023 : ",
-                                    style: pw.TextStyle(
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  pw.TextSpan(
-                                    text: "\nPayment Last Date : ",
-                                    style: pw.TextStyle(
-                                      fontWeight: pw.FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      pw.Container(
-                        alignment: pw.Alignment.center,
-                        height: 120,
-                        width: 250,
-                        child: pw.Column(
-                          children: [
-                            pw.RichText(
-                              text: pw.TextSpan(
-                                children: [
-                                  pw.TextSpan(
-                                    text: "Receiver",
-                                    style: pw.TextStyle(
-                                      fontWeight: pw.FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  pw.TextSpan(
-                                    text: "\nBD Desai",
-                                    style: pw.TextStyle(
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  pw.TextSpan(
-                                    text: "\nVillion Shop",
-                                    style: pw.TextStyle(
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  pw.TextSpan(
-                                    text: "\nIndia",
-                                    style: pw.TextStyle(
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  pw.Container(
-                    alignment: pw.Alignment.centerLeft,
-                    margin: pw.EdgeInsets.only(top: 5),
-                    height: 30,
-                    width: 550,
-                    child: pw.Text(
-                      "Contect number : +91 7845562349",
-                      style: pw.TextStyle(
+                        color: PdfColors.white,
                         fontSize: 18,
+                        fontWeight: pw.FontWeight.bold,
                       ),
                     ),
                   ),
-                  pw.Container(
-                    alignment: pw.Alignment.centerLeft,
-                    height: 30,
-                    width: 550,
+                  pw.Expanded(
+                    flex: 1,
                     child: pw.Text(
-                      "bonikadesai7951@gmail.com",
+                      "Quntity",
                       style: pw.TextStyle(
+                        color: PdfColors.white,
                         fontSize: 18,
+                        fontWeight: pw.FontWeight.bold,
                       ),
                     ),
                   ),
-                  pw.Container(
-                    margin: pw.EdgeInsets.only(top: 5),
-                    height: 30,
-                    width: 550,
-                    color: PdfColors.green,
-                    child: pw.Row(
-                      children: [
-                        pw.Expanded(
-                          flex: 2,
-                          child: pw.Text(
-                            "Item Description",
-                            style: pw.TextStyle(
-                              fontSize: 18,
-                              fontWeight: pw.FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        pw.Expanded(
-                          flex: 1,
-                          child: pw.Text(
-                            "Quntity",
-                            style: pw.TextStyle(
-                              fontSize: 18,
-                              fontWeight: pw.FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        pw.Expanded(
-                          flex: 1,
-                          child: pw.Text(
-                            "Price",
-                            style: pw.TextStyle(
-                              fontSize: 18,
-                              fontWeight: pw.FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        pw.Expanded(
-                          flex: 1,
-                          child: pw.Text(
-                            "SubTotal",
-                            style: pw.TextStyle(
-                              fontSize: 18,
-                              fontWeight: pw.FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ],
+                  pw.Expanded(
+                    flex: 1,
+                    child: pw.Text(
+                      "Price",
+                      style: pw.TextStyle(
+                        color: PdfColors.white,
+                        fontSize: 18,
+                        fontWeight: pw.FontWeight.bold,
+                      ),
                     ),
                   ),
-                  pw.Container(
-                    margin: pw.EdgeInsets.only(top: 5),
-                    height: 400,
-                    width: 570,
-                    color: PdfColors.green,
-                    child: pw.ListView.builder(
-                        itemBuilder: (context, index) => pw.Row(
-                              children: [
-                                pw.Expanded(
-                                  flex: 2,
-                                  child: pw.Container(
-                                    height: 30,
-                                    alignment: pw.Alignment.centerLeft,
-                                    child: pw.Text(
-                                      "${Globals.vegetables[index].name}",
-                                      style: pw.TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: pw.FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                pw.Expanded(
-                                  flex: 1,
-                                  child: pw.Container(
-                                    height: 20,
-                                    alignment: pw.Alignment.center,
-                                    child: pw.Text(
-                                      "${Globals.vegetables[index].quanty}",
-                                      style: pw.TextStyle(
-                                        fontSize: 18,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                pw.Expanded(
-                                  flex: 1,
-                                  child: pw.Container(
-                                    height: 20,
-                                    alignment: pw.Alignment.center,
-                                    child: pw.Text(
-                                      "${Globals.vegetables[index].price}",
-                                      style: pw.TextStyle(
-                                        fontSize: 18,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                pw.Expanded(
-                                  flex: 1,
-                                  child: pw.Container(
-                                    height: 20,
-                                    alignment: pw.Alignment.center,
-                                    child: pw.Text(
-                                      "${Globals.vegetables[index].subtotal?.toInt()}",
-                                      style: pw.TextStyle(
-                                        fontSize: 18,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                        itemCount: Globals.vegetables.length),
-                  ),
-                  pw.Container(
-                    margin: pw.EdgeInsets.only(top: 5),
-                    height: 30,
-                    width: 550,
-                    color: PdfColors.green,
-                    child: pw.Row(
-                      children: [
-                        pw.Expanded(
-                          flex: 1,
-                          child: pw.Container(
-                            height: 30,
-                            alignment: pw.Alignment.center,
-                            child: pw.Text(
-                              "Total",
-                              style: pw.TextStyle(
-                                fontWeight: pw.FontWeight.bold,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ),
-                        pw.Expanded(
-                          flex: 1,
-                          child: pw.Container(
-                            height: 30,
-                            alignment: pw.Alignment.center,
-                            child: pw.Text(
-                              "${Globals.Total()}",
-                              style: pw.TextStyle(
-                                fontWeight: pw.FontWeight.bold,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  pw.Container(
-                    margin: pw.EdgeInsets.only(top: 5),
-                    height: 30,
-                    width: 550,
-                    color: PdfColors.green,
-                    child: pw.Row(
-                      children: [
-                        pw.Expanded(
-                          flex: 5,
-                          child: pw.Container(
-                            height: 30,
-                            alignment: pw.Alignment.center,
-                            child: pw.Text(
-                              "Tax(18%)",
-                              style: pw.TextStyle(
-                                fontWeight: pw.FontWeight.bold,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ),
-                        pw.Expanded(
-                          flex: 5,
-                          child: pw.Container(
-                            height: 30,
-                            alignment: pw.Alignment.center,
-                            child: pw.Text(
-                              "Tax(18%)",
-                              style: pw.TextStyle(
-                                fontWeight: pw.FontWeight.bold,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ),
-                        pw.Expanded(
-                          flex: 1,
-                          child: pw.Container(
-                            height: 30,
-                            alignment: pw.Alignment.center,
-                            child: pw.Text(
-                              "${((double.parse(Globals.Total()) * 18) / 100)}",
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  pw.Container(
-                    margin: pw.EdgeInsets.only(top: 5),
-                    height: 30,
-                    width: 550,
-                    color: PdfColors.green100,
-                    child: pw.Row(
-                      children: [
-                        pw.Expanded(
-                          flex: 5,
-                          child: pw.Container(
-                            height: 30,
-                            alignment: pw.Alignment.center,
-                            child: pw.Text(
-                              "Total",
-                              style: pw.TextStyle(
-                                fontSize: 20,
-                                fontWeight: pw.FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                        pw.Expanded(
-                          flex: 1,
-                          child: pw.Container(
-                            height: 30,
-                            alignment: pw.Alignment.center,
-                            child: pw.Text(
-                              "${((double.parse(Globals.Total())) + ((double.parse(Globals.Total()) * 18) / 100))}",
-                              style: pw.TextStyle(
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                  pw.Expanded(
+                    flex: 1,
+                    child: pw.Text(
+                      "SubTotal",
+                      style: pw.TextStyle(
+                        color: PdfColors.white,
+                        fontSize: 18,
+                        fontWeight: pw.FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],
               ),
-            ],
-          ),
+            ),
+            pw.Container(
+              margin: pw.EdgeInsets.only(top: 5),
+              height: 400,
+              width: 600,
+              color: PdfColors.green400,
+              child: pw.ListView.builder(
+                  itemBuilder: (context, index) => pw.Row(
+                        children: [
+                          pw.Expanded(
+                            flex: 2,
+                            child: pw.Container(
+                              height: 30,
+                              alignment: pw.Alignment.centerLeft,
+                              child: pw.Text(
+                                "${Globals.vegetables[index].name}",
+                                style: pw.TextStyle(
+                                  color: PdfColors.white,
+                                  fontSize: 16,
+                                  fontWeight: pw.FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                          pw.Expanded(
+                            flex: 1,
+                            child: pw.Container(
+                              height: 20,
+                              alignment: pw.Alignment.center,
+                              child: pw.Text(
+                                "${Globals.vegetables[index].quanty} KG",
+                                style: pw.TextStyle(
+                                  color: PdfColors.white,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                          ),
+                          pw.Expanded(
+                            flex: 1,
+                            child: pw.Container(
+                              height: 20,
+                              alignment: pw.Alignment.center,
+                              child: pw.Text(
+                                "${Globals.vegetables[index].price!.toInt()}",
+                                style: pw.TextStyle(
+                                  color: PdfColors.white,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                          ),
+                          pw.Expanded(
+                            flex: 1,
+                            child: pw.Container(
+                              height: 20,
+                              alignment: pw.Alignment.center,
+                              child: pw.Text(
+                                "${Globals.vegetables[index].subtotal?.toInt()}",
+                                style: pw.TextStyle(
+                                  color: PdfColors.white,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                  itemCount: Globals.vegetables.length),
+            ),
+            pw.Container(
+              margin: pw.EdgeInsets.only(top: 5),
+              height: 30,
+              width: 600,
+              color: PdfColors.green200,
+              child: pw.Row(
+                mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                children: [
+                  pw.Expanded(
+                    flex: 1,
+                    child: pw.Container(
+                      height: 30,
+                      alignment: pw.Alignment.center,
+                      child: pw.Text(
+                        "Total",
+                        style: pw.TextStyle(
+                          color: PdfColors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                  pw.Expanded(
+                    flex: 1,
+                    child: pw.Container(
+                      height: 30,
+                      alignment: pw.Alignment.center,
+                      child: pw.Text(
+                        "${Globals.Total()}",
+                        style: pw.TextStyle(
+                          color: PdfColors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            pw.Container(
+              height: 30,
+              width: 600,
+              color: PdfColors.green200,
+              child: pw.Row(
+                mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                children: [
+                  pw.Expanded(
+                    flex: 1,
+                    child: pw.Container(
+                      height: 30,
+                      alignment: pw.Alignment.center,
+                      child: pw.Text(
+                        "Tax(18%)",
+                        style: pw.TextStyle(
+                          color: PdfColors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                  pw.Expanded(
+                    flex: 1,
+                    child: pw.Container(
+                      height: 30,
+                      alignment: pw.Alignment.center,
+                      child: pw.Text(
+                        "${((double.parse(Globals.Total()) * 18) / 100)}",
+                        style: pw.TextStyle(
+                          color: PdfColors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            pw.Container(
+              height: 30,
+              width: 600,
+              color: PdfColors.green200,
+              child: pw.Row(
+                mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                children: [
+                  pw.Expanded(
+                    flex: 1,
+                    child: pw.Container(
+                      height: 30,
+                      alignment: pw.Alignment.center,
+                      child: pw.Text(
+                        "Total",
+                        style: pw.TextStyle(
+                          color: PdfColors.black,
+                          fontSize: 20,
+                          fontWeight: pw.FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                  pw.Expanded(
+                    flex: 1,
+                    child: pw.Container(
+                      height: 30,
+                      alignment: pw.Alignment.center,
+                      child: pw.Text(
+                        "${((double.parse(Globals.Total())) + ((double.parse(Globals.Total()) * 18) / 100))} Rs",
+                        style: pw.TextStyle(
+                          color: PdfColors.black,
+                          fontSize: 20,
+                          fontWeight: pw.FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -511,97 +514,6 @@ class _BillPrintPageState extends State<BillPrintPage> {
                                     ],
                                   ),
                                 ),
-                                // Row(
-                                //   children: [
-                                //     GestureDetector(
-                                //       onTap: () {
-                                //         setState(() {
-                                //           (i <= 1) ? i == 1 : i--;
-                                //         });
-                                //       },
-                                //       child: Container(
-                                //         alignment: Alignment.center,
-                                //         margin: EdgeInsets.all(3),
-                                //         height: 20,
-                                //         width: 20,
-                                //         decoration: BoxDecoration(
-                                //           color: Colors.green,
-                                //           boxShadow: [
-                                //             BoxShadow(
-                                //               spreadRadius: 1,
-                                //               blurRadius: 1,
-                                //               color: Colors.green,
-                                //             ),
-                                //           ],
-                                //           borderRadius:
-                                //               BorderRadius.circular(5),
-                                //         ),
-                                //         child: Icon(
-                                //           Icons.remove,
-                                //           size: 20,
-                                //           color: Colors.white,
-                                //         ),
-                                //       ),
-                                //     ),
-                                //     Container(
-                                //       alignment: Alignment.center,
-                                //       margin: EdgeInsets.all(5),
-                                //       height: 20,
-                                //       width: 20,
-                                //       decoration: BoxDecoration(
-                                //         color: Colors.green,
-                                //         boxShadow: [
-                                //           BoxShadow(
-                                //               spreadRadius: 1,
-                                //               blurRadius: 1,
-                                //               color: Colors.green.shade700),
-                                //         ],
-                                //         borderRadius:
-                                //             BorderRadius.circular(5),
-                                //       ),
-                                //       child: Text(
-                                //         "${i.toInt()}",
-                                //         style: TextStyle(
-                                //           color: Colors.white,
-                                //           fontSize: 15,
-                                //         ),
-                                //       ),
-                                //     ),
-                                //     GestureDetector(
-                                //       onTap: () {
-                                //         setState(() {
-                                //           i++;
-                                //         });
-                                //       },
-                                //       child: Container(
-                                //         alignment: Alignment.center,
-                                //         margin: EdgeInsets.all(3),
-                                //         height: 20,
-                                //         width: 20,
-                                //         decoration: BoxDecoration(
-                                //           color: Colors.green,
-                                //           boxShadow: [
-                                //             BoxShadow(
-                                //               spreadRadius: 1,
-                                //               blurRadius: 1,
-                                //               color: Colors.green,
-                                //             ),
-                                //           ],
-                                //           borderRadius:
-                                //               BorderRadius.circular(5),
-                                //         ),
-                                //         child: Icon(
-                                //           Icons.add,
-                                //           size: 20,
-                                //           color: Colors.white,
-                                //         ),
-                                //       ),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10,
-                                //     ),
-                                //   ],
-                                // ),
                                 GestureDetector(
                                   onTap: () {
                                     setState(() {
